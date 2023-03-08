@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ChapterViewer from './chapter-viewer.js';
+import ChapterViewer from './components/ChapterViewer';
 import Typography from '@mui/material/Typography';
 
 import CssBaseline from '@mui/material/CssBaseline';
@@ -23,7 +23,7 @@ class App extends React.Component {
         				<Typography variant="h2" component="div" gutterBottom sx={{ color: '#CCCCCC' }}>
           					Tao Te Ching
         				</Typography>
-        				<ChapterViewer />
+        				<ChapterViewer/>
         			</Box>
       			</Container>
     		</React.Fragment>

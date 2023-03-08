@@ -1,4 +1,4 @@
-const taoText = [
+[
     [
         "The Tao that can be told is not the eternal Tao.",
         "The name that can be named is not the eternal name.",
@@ -1217,4 +1217,5 @@ const taoText = [
         "The Tao of heaven is pointed but does no harm.",
         "The Tao of the sage is work without effort."
     ]
-];
+
+]
