@@ -1,13 +1,29 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: #000000;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.chapter-selector {
+	background-color: #CCCCCC;
+	width: 40%;
+	height: 40px;
+	margin: 20px;
+}
+.chapter-number {
+	background-color: #CCCCCC;
+	width: auto;
+	height: 90px;
+	padding: 20px;
+	border-radius: 15px;
+}
+.chapter-text {
+	background-color: #EEEEEE;
+	width: auto;
+	padding: 20px;
+	margin: 20px;
+	white-space: pre;
+}
+.chapter-search {
+	background-color: #CCCCCC;
+	width: 50%;
+	padding: 20px;
+	margin: 20px;
 }
