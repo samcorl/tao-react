@@ -6,12 +6,12 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
 function ChapterViewer(props) {
-    const [chapter, useChapter] = useState(1);
+    const [chapter, updateChapter] = useState(1);
 
     return (
         <div>
-            <ChapterSelector updateChapter={useChapter}/>
-            <Card sx={{ minWidth: 275 }}>
+            <ChapterSelector updateChapter={updateChapter}/>
+            <Card sx={{ minWidth: 475 }}>
                 <CardContent>
                     <Typography className="chapter-number" variant="h3" component="div" gutterBottom>
                         {chapter}

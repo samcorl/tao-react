@@ -2,10 +2,9 @@ body {
 	background-color: #000000;
 }
 .chapter-selector {
-	background-color: #CCCCCC;
 	width: 40%;
-	height: 40px;
-	margin: 20px;
+	background-color: #eeeeee;
+    margin-bottom: 20px;
 }
 .chapter-number {
 	background-color: #CCCCCC;
@@ -15,10 +14,6 @@ body {
 	border-radius: 15px;
 }
 .chapter-text {
-	background-color: #EEEEEE;
-	width: auto;
-	padding: 20px;
-	margin: 20px;
 	white-space: pre;
 }
 .chapter-search {

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import './index.css';
 import ChapterViewer from './components/ChapterViewer';
 import Typography from '@mui/material/Typography';
@@ -19,7 +21,7 @@ class App extends React.Component {
 			<React.Fragment>
       			<CssBaseline />
       			<Container maxWidth="sm">
-        			<Box sx={{ bgcolor: '#333333', height: '100vh', padding: '20px' }}>
+        			<Box sx={{ bgcolor: '#333333', padding: '20px' }}>
         				<Typography variant="h2" component="div" gutterBottom sx={{ color: '#CCCCCC' }}>
           					Tao Te Ching
         				</Typography>
