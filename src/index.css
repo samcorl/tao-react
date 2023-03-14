@@ -1,9 +1,12 @@
 body {
 	background-color: #000000;
 }
+.chapter-selector-button {
+	background-color: #ffffff !important;
+	padding: 20px !important;
+}
 .chapter-selector {
 	width: 40%;
-	background-color: #eeeeee;
     margin-bottom: 20px;
 }
 .chapter-number {
@@ -14,7 +17,10 @@ body {
 	border-radius: 15px;
 }
 .chapter-text {
-	white-space: pre;
+	min-height:12px;
+}
+.chapter-text-lines {
+	padding: 20px 20px 20px 20px; 
 }
 .chapter-search {
 	background-color: #CCCCCC;

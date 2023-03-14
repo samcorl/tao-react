@@ -20,7 +20,7 @@ class App extends React.Component {
 		return(
 			<React.Fragment>
       			<CssBaseline />
-      			<Container maxWidth="sm">
+      			<Container>
         			<Box sx={{ bgcolor: '#333333', padding: '20px' }}>
         				<Typography variant="h2" component="div" gutterBottom sx={{ color: '#CCCCCC' }}>
           					Tao Te Ching

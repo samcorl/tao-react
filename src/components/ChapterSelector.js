@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import ChapterMenuItems from './ChapterMenuItems'
 
 function ChapterSelector(props) {
@@ -10,19 +9,19 @@ function ChapterSelector(props) {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
    };
-  const handleClose = (event) => {
+  const handleClose = () => {
     setAnchorEl(null);
   };
 
 	return(
-		<div>
+		<div className="chapter-selector">
 	      <Button
 	        id="basic-button"
 	        aria-controls={open ? 'basic-menu' : undefined}
 	        aria-haspopup="true"
 	        aria-expanded={open ? 'true' : undefined}
 	        onClick={handleClick}
-			className="chapter-selector"
+			className="chapter-selector-button"
 	      >
 	        Choose a Chapter
 	      </Button>
@@ -31,11 +30,12 @@ function ChapterSelector(props) {
 	        anchorEl={anchorEl}
 	        open={open}
 	        onClose={handleClose}
+			onClick={handleClose}
 	        MenuListProps={{
 	          'aria-labelledby': 'basic-button',
 	        }}
 	      >
-	        <ChapterMenuItems updateChapter={props.updateChapter}/>
+	        <ChapterMenuItems updateChapter={props.updateChapter} />
 	      </Menu>
 		</div>	
 		);

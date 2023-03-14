@@ -16,7 +16,7 @@ function ChapterViewer(props) {
                     <Typography className="chapter-number" variant="h3" component="div" gutterBottom>
                         {chapter}
                     </Typography>
-                    <ChapterText chapter={chapter}/>
+                    <ChapterText chapter={chapter} className="chapter-text-lines"/>
                </CardContent>
             </Card>
         </div>
