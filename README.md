@@ -7,5 +7,5 @@ I would turn to a random page and look for inspiration in the chapter I found.
 
 ## Try it out
 
-This might be hosted at http://randomtao.com
+This might be hosted at https://randomtao.com
 
