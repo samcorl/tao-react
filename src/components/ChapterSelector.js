@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import ChapterMenuItems from './ChapterMenuItems'
+import styles from './ChapterSelector.module.css';
 
 function ChapterSelector(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,14 +15,15 @@ function ChapterSelector(props) {
   };
 
 	return(
-		<div className="chapter-selector">
+		<div className={styles.selector}>
 	      <Button
 	        id="basic-button"
 	        aria-controls={open ? 'basic-menu' : undefined}
 	        aria-haspopup="true"
 	        aria-expanded={open ? 'true' : undefined}
 	        onClick={handleClick}
-			className="chapter-selector-button"
+			className={styles.selectorButton}
+			sx={{'background-color': '#ffffff', 'padding': '20px'}}
 	      >
 	        Choose a Chapter
 	      </Button>
