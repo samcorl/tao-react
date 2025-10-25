@@ -1,6 +1,64 @@
-.search {
-	background-color: #CCCCCC;
-	width: 50%;
-	padding: 20px;
-	margin: 20px;
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 300px;
+  flex: 2;
+}
+
+.label {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.autocomplete {
+  width: 100%;
+}
+
+/* Force Kendo AutoComplete input visibility */
+.autocomplete .k-input-inner,
+.autocomplete input,
+.autocomplete .k-input {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+/* Force dropdown list visibility */
+.autocomplete .k-list-item {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+.searchItem {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.searchItem:last-child {
+  border-bottom: none;
+}
+
+.chapterTitle {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.chapterPreview {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .searchContainer {
+    min-width: auto;
+    width: 100%;
+    flex: none;
+  }
 }

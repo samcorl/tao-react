@@ -1,3 +1,248 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
-	background-color: #000000;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #000000 0%, #404040 100%);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* App layout */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.app-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-subtitle {
+  font-size: 4rem;
+  margin: 20px 0 0 0;
+  opacity: 0.9;
+  line-height: 1;
+}
+
+.app-subtitle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 50%;
+  animation: slowSpin 20s linear infinite;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-subtitle-button:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  animation: fastSpin 2s linear infinite;
+}
+
+.app-subtitle-button:active {
+  animation: fastSpin 0.5s linear infinite;
+}
+
+@keyframes fastSpin {
+  from {
+    transform: scale(1.1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Force Kendo UI components to be visible */
+.k-input-inner,
+.k-input,
+.k-dropdown-wrap,
+.k-autocomplete .k-input,
+.k-dropdownlist .k-input {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+.k-list-item,
+.k-item {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+.k-list-item:hover,
+.k-item:hover {
+  background-color: #f5f5f5 !important;
+}
+
+/* Aggressive fix for Kendo dropdown arrows */
+.k-dropdownlist .k-select,
+.k-dropdownlist .k-select .k-button,
+.k-dropdownlist .k-select .k-icon,
+.k-dropdownlist .k-select .k-svg-icon,
+.k-dropdownlist .k-select::after,
+.k-dropdownlist .k-select::before,
+.k-autocomplete .k-select,
+.k-autocomplete .k-select .k-button,
+.k-autocomplete .k-select .k-icon,
+.k-autocomplete .k-select .k-svg-icon {
+  background-color: #ffffff !important;
+  color: #333 !important;
+  fill: #333 !important;
+  border-left: 1px solid #ccc !important;
+}
+
+/* Force arrow visibility with content */
+.k-dropdownlist .k-select::after {
+  content: "▼" !important;
+  color: #333 !important;
+  font-size: 12px !important;
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+}
+
+/* Footer and download section */
+.app-footer {
+  margin-top: 60px;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.download-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.download-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.download-link,
+.copy-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.copy-button {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.download-link:hover,
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.download-link:active,
+.copy-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.copy-status {
+  font-size: 0.8rem;
+  color: #4CAF50;
+  margin: 10px 0 0 0;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .app-subtitle,
+  .app-subtitle-button {
+    font-size: 3rem;
+  }
+  
+  .download-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .download-link,
+  .copy-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 280px;
+  }
 }

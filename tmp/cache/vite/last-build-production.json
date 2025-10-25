@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "errors": "npm warn exec The following package was not found and will be installed: vite@7.1.5\n✗ Build failed in 17ms\nerror during build:\nCould not resolve entry module \"index.html\".\n    at getRollupError (file:///Users/samcorl/.npm/_npx/9ed06546b0653f96/node_modules/rollup/dist/es/shared/parseAst.js:401:41)\n    at error (file:///Users/samcorl/.npm/_npx/9ed06546b0653f96/node_modules/rollup/dist/es/shared/parseAst.js:397:42)\n    at ModuleLoader.loadEntryModule (file:///Users/samcorl/.npm/_npx/9ed06546b0653f96/node_modules/rollup/dist/es/shared/node-entry.js:21505:20)\n    at async Promise.all (index 0)\n",
+  "timestamp": "2025-09-11 22:12:50",
+  "vite_ruby": "3.9.2",
+  "digest": "194a4896a24163d4b26bc2d122f3f962d1a6dfbe"
+}

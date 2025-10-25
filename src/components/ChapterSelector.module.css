@@ -1,4 +1,56 @@
 .selector {
-	width: 40%;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+  flex: 1;
+}
+
+.label {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+/* Force Kendo DropDownList visibility */
+.dropdown .k-input-inner,
+.dropdown .k-input,
+.dropdown .k-dropdown-wrap {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+.dropdown .k-list-item {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+/* Fix dropdown arrow visibility */
+.dropdown .k-select,
+.dropdown .k-button,
+.dropdown .k-icon {
+  color: #333 !important;
+  background-color: #ffffff !important;
+}
+
+.dropdown .k-svg-icon {
+  fill: #333 !important;
+}
+
+/* Fix the arrow area background - this was the core issue */
+.dropdown .k-select {
+  background-color: #ffffff !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .selector {
+    min-width: auto;
+    width: 100%;
+  }
 }
